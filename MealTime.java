@@ -2,7 +2,6 @@ import java.io.Console;
 
 public class MealTime {
   public static void main(String[] args) {
-    Console myConsole = System.console();
 
     // System.out.println("What did you eat for breakfast?");
     // replaces the above code with the question outlined in the custom method defined below.
@@ -21,8 +20,10 @@ public class MealTime {
 
   public static void askWhatYouAteFor(String meal) {
     // ADD HERE to DRY code
+    Console myConsole = System.console();
+
     System.out.println("What did you eat for " + meal + "?");
     String yourMeal = myConsole.readLine();
-    System.out.println("You had " + yourMeal " for " + meal + ".");
+    System.out.println("You had " + yourMeal + " for " + meal + ".");
   }
 }
